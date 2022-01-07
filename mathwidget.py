@@ -23,8 +23,22 @@ def lahenda():
         elif float(a.get())==0 and float(b.get())!=0 and float(c.get())!=0:
             vastus.configure(text=f"Ошибка!")
             a.configure(bg="red")
+            b.configure(bg="red")
+            c.configure(bg="red")
             graf=False
-        else:
+        elif float(a.get())!=0 and float(b.get())==0 and float(c.get())!=0:
+            vastus.configure(text=f"Ошибка!")
+            a.configure(bg="red")
+            b.configure(bg="red")
+            c.configure(bg="red")
+            graf=False
+        elif float(a.get())!=0 and float(b.get())!=0 and float(c.get())==0:
+            vastus.configure(text=f"Ошибка!")
+            a.configure(bg="red")
+            b.configure(bg="red")
+            c.configure(bg="red")
+            graf=False
+        elif float(a.get())!=0 and float(b.get())!=0 and float(c.get())!=0:
             a_=float(a.get())
             b_=float(b.get())
             c_=float(c.get())
@@ -40,11 +54,12 @@ def lahenda():
                 graf=True
             else:
                 t="Корней нет"
-                vastus.configure(text=f"D={D}\n{t}")
-                a.configure(bg="lightcyan")
-                b.configure(bg="lightcyan")
-                c.configure(bg="lightcyan")
                 graf=False
+            vastus.configure(text=f"D={D}\n{t}")
+            a.configure(bg="lightcyan")
+            b.configure(bg="lightcyan")
+            c.configure(bg="lightcyan")
+               
     else:
         if a.get()=="":
             a.configure(bg="red")
@@ -107,4 +122,3 @@ lbl4.pack(side=LEFT)
 graf.pack(side=RIGHT)
 resen.pack(side=RIGHT) #,padx=10,pady=10
 aken.mainloop()
-
